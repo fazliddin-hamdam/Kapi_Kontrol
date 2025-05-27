@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Log Kayıtları</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f4f4; margin: 0; }
+        .container { width: 90%; max-width: 700px; margin: 32px auto; background: #fff; padding: 26px 32px; border-radius: 14px; box-shadow: 0 4px 16px #0001;}
+        h1 { text-align: center; color: #1976d2;}
+        pre { background: #eaeaea; padding: 18px; border-radius: 8px; font-size: 16px; overflow-x: auto;}
+        a { display: block; margin: 18px 0 0 0; text-align: center; color: #124476;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Log Kayıtları</h1>
+        <pre>
+{% for log in loglar %}
+{{ log.strip() }}
+{% else %}
+Log bulunamadı.
+{% endfor %}
+        </pre>
+        <a href="{{ url_for('index') }}">← Ana sayfa</a>
+    </div>
+</body>
+</html>

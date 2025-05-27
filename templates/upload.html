@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+    <title>Truck & Plate Tespiti</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h2>Truck ve Plaka Testi için<br>Bir Resim Yükleyin</h2>
+        <form class="upload-form" method="POST" enctype="multipart/form-data">
+            <input type="file" name="file" accept=".jpg,.jpeg,.png" required>
+            <button type="submit">Yükle ve Test Et</button>
+        </form>
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            <ul class="flash-messages">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+            </ul>
+          {% endif %}
+        {% endwith %}
+        <a href="/ekle" class="back-link">Plaka ekle</a>
+    </div>
+</body>
+</html>

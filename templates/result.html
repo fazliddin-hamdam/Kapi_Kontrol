@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Sonuç</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="card">
+        <h2>Sonuç Görseli</h2>
+        <img src="{{ result_img }}" class="result-img">
+        {% if plaka_sonuc == 'Kapı açıldı' %}
+            <div class="info-box success">Kapı açıldı ✅</div>
+        {% elif plaka_sonuc == 'Buzzer!' %}
+            <div class="info-box error">Buzzer! ❌</div>
+        {% elif plaka_sonuc == 'Plaka okunamadı' %}
+            <div class="info-box warn">Plaka okunamadı!</div>
+        {% endif %}
+        <a href="/" class="result-link">Yeniden yükle</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,280 @@
+/* Temel Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Sayfa Gövdesi */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #eef2f5;
+  color: #333;
+  line-height: 1.6;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+/* Başlıklar */
+h1, h2 {
+  color: #2c3e50;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  letter-spacing: .03em;
+  font-size: 2.1rem;
+}
+h1 svg, h2 svg { margin-right: 10px; }
+
+/* Navigasyon Butonları */
+nav .btn, .nav-link, input[type="submit"], button[type="submit"] {
+  display: inline-block;
+  margin-right: 10px;
+  padding: 8px 16px;
+  background: #3498db;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background .3s;
+  border: none;
+  cursor: pointer;
+  font-size: 1.02em;
+  font-weight: 500;
+}
+nav .btn:hover, .nav-link:hover, input[type="submit"]:hover, button[type="submit"]:hover {
+  background: #2980b9;
+}
+
+/* Form Elemanları */
+form {
+  background: #fff;
+  padding: 22px 20px;
+  border-radius: 7px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+  margin: 22px auto 34px auto;
+  max-width: 430px;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+label { font-weight: bold; margin-bottom: 8px; display: block; }
+input[type="text"], input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  border: 1.2px solid #ccd1d9;
+  border-radius: 5px;
+  margin-bottom: 12px;
+  font-size: 1em;
+}
+input[type="file"] {
+  background: #e3f6fd;
+  border-color: #93d0f2;
+  color: #0a6c5c;
+}
+
+button, input[type="submit"] {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 6px;
+  font-size: 1.07em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 6px;
+  transition: background 0.2s;
+}
+button:hover, input[type="submit"]:hover {
+  background: #1d8251;
+}
+
+/* Tablo Stilleri */
+section.db-table table {
+  width: 100%; max-width: 640px;
+  border-collapse: collapse;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  margin: 0 auto 36px auto;
+  border-radius: 7px;
+  overflow: hidden;
+}
+th, td {
+  padding: 13px 16px;
+  border-bottom: 1px solid #ecf0f1;
+  text-align: center;
+  font-size: 1.01em;
+}
+thead { background: #f4f6f8; font-weight: 500; }
+tr:nth-child(even) { background: #fafafa; }
+tbody tr:hover { background: #e9f5fc; }
+
+/* Log Listeleri */
+.log-list {
+  background: #fff;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.09);
+  max-height: 400px;
+  overflow-y: auto;
+  margin-bottom: 22px;
+}
+.log-entry {
+  font-family: monospace;
+  padding: 6px 0;
+  border-bottom: 1px dashed #ddd;
+  color: #424242;
+  font-size: 1em;
+}
+.log-entry:last-child { border-bottom: none; }
+
+/* Geri Link */
+.back-link, .result-link, .result-link:visited {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #e67e22;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background .3s;
+  font-size: 1.02em;
+  font-weight: 500;
+}
+.back-link:hover, .result-link:hover { background: #d35400; }
+
+/* Canlı Tespit */
+section.live {
+  margin-top: 40px;
+}
+.video-container {
+  text-align: center;
+  margin: 20px auto;
+}
+.video-container img, .video-feed {
+  max-width: 90%;
+  height: auto;
+  border: 4px solid #444;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+  display: block;
+  margin: 0 auto;
+}
+
+/* Görsel Yükleme Formu (upload.html) */
+.upload-form {
+  max-width: 430px;
+  margin: 38px auto 30px auto;
+  background: #fafdff;
+  border-radius: 8px;
+  box-shadow: 0 4px 18px #b9d5ec33;
+  padding: 34px 30px 22px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.upload-form input[type="file"] {
+  padding: 10px 8px;
+  background: #e3f6fd;
+  border: 1.5px solid #93d0f2;
+  border-radius: 7px;
+  color: #0a6c5c;
+  font-size: 1em;
+}
+.upload-form button, .upload-form input[type="submit"] {
+  background: #27ae60;
+  color: white;
+  border: none;
+  padding: 11px 0;
+  border-radius: 6px;
+  font-size: 1.06em;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+.upload-form button:hover, .upload-form input[type="submit"]:hover {
+  background: #1d8251;
+}
+
+/* Sonuç Görseli (result.html) */
+.result-img {
+  display: block;
+  max-width: 95vw;
+  max-height: 68vh;
+  margin: 38px auto 12px auto;
+  border: 3.5px solid #2ecc40;
+  border-radius: 14px;
+  box-shadow: 0 6px 26px #91e8ce66;
+}
+
+.result-link, .result-link:visited {
+  display: inline-block;
+  background: #2980b9;
+  color: #fff;
+  padding: 9px 22px;
+  margin: 28px auto 0 auto;
+  border-radius: 6px;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  transition: background .2s;
+}
+.result-link:hover {
+  background: #155a8a;
+}
+
+/* Mesaj Kutusu */
+ul.flash-messages, .flash-messages {
+  color: #d0264c;
+  background: #fff0f3;
+  border-radius: 8px;
+  padding: 13px 20px;
+  margin: 0 auto 22px auto;
+  max-width: 430px;
+  box-shadow: 0 2px 6px #f88a8a33;
+  font-size: 1.07em;
+  list-style: none;
+}
+
+/* Ortalama */
+.centered {
+  text-align: center;
+}
+
+hr { margin: 30px 0; border: none; border-top: 1px solid #ddd; }
+
+/* Responsive ayarları */
+@media (max-width: 600px) {
+  body { padding: 10px; }
+  form, .upload-form { max-width: 99vw; padding: 10px; }
+  section.db-table table { font-size: .96em; }
+  .result-img { max-width: 99vw; }
+  h1, h2 { font-size: 1.3em; }
+}
+
+.info-box {
+  margin: 20px auto 0 auto;
+  padding: 18px 0;
+  font-size: 1.35em;
+  font-weight: 600;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 330px;
+  box-shadow: 0 2px 14px #4cd96418;
+  letter-spacing: 0.04em;
+}
+.info-box.success {
+  background: #e6fae8;
+  color: #178a3c;
+  border: 2px solid #36bb77;
+}
+.info-box.error {
+  background: #ffeded;
+  color: #c4002b;
+  border: 2px solid #ff4567;
+}
+.info-box.warn {
+  background: #fff9e5;
+  color: #b36a00;
+  border: 2px solid #ffd933;
+}
+

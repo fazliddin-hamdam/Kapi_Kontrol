@@ -1,0 +1,10 @@
+venv/
+yolovenv/
+__pycache__/
+*.pyd
+*.dll
+*.lib
+*.pt
+*.h5
+*.onnx
+*.db

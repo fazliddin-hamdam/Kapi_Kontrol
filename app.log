@@ -1,0 +1,3 @@
+2025-05-25 20:17:09,486 - INFO - Hesaplama cihazý: cpu
+2025-05-25 20:17:25,533 - ERROR - Model yükleme hatasý: cannot instantiate 'PosixPath' on your system. Cache may be out of date, try `force_reload=True` or see https://docs.ultralytics.com/yolov5/tutorials/pytorch_hub_model_loading for help.
+2025-05-25 20:17:25,534 - CRITICAL - Uygulama baþlatýlamadý: Model yüklenemedi: cannot instantiate 'PosixPath' on your system. Cache may be out of date, try `force_reload=True` or see https://docs.ultralytics.com/yolov5/tutorials/pytorch_hub_model_loading for help.
